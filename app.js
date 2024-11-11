@@ -1,20 +1,18 @@
-require('dotenv').config();
 const express = require('express');
+require('dotenv').config();
 
 const path = require('path');
 const app = express();
 
-const routes = require('./routes/index');
-
+const Acomodacao_Routes = require('./routes/Acomodacao_Routes');
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
-// Usando as rotas
-app.use('/', routes);
+// Roteamento
+app.use('/', Acomodacao_Routes);
 
 // Iniciando o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });

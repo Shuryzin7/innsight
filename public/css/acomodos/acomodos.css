@@ -23,22 +23,6 @@ header .logo h1 {
     margin-bottom: 10px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
 /* Detalhes da Propriedade */
 .property-details {
     padding: 40px 20px;

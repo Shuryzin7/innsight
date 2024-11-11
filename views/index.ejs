@@ -15,12 +15,6 @@
         <div class="logo">
             <h1>Hospedagem</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="/acomodos">Acomodações</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Conteúdo Principal -->
@@ -30,10 +24,10 @@
             <div class="search-filter">
                 <h2>Encontre sua hospedagem</h2>
                 <div class="search-box">
-                    <input type="text" placeholder="Onde você quer ficar?" aria-label="Destino ou cidade">
+                    <input type="text" placeholder="Onde você quer ficar?" aria-label="Destino ou cidade" id="where">
                     <input type="date" placeholder="Data de Check-in" aria-label="Data de check-in">
                     <input type="date" placeholder="Data de Check-out" aria-label="Data de check-out">
-                    <button class="cta-button">Filtrar</button>
+                    <button class="cta-button" id="btn_filter">Filtrar</button>
                 </div>
             </div>
 
@@ -45,7 +39,8 @@
                         <div class="property-card">
                             <img src="https://via.placeholder.com/400x300" alt="<%= propriedade.nome %>"> <!-- Imagem fixa -->
                             <div class="property-info">
-                                <h3><%= propriedade.lugar %></h3>
+                                <h3><%= propriedade.nome %></h3>
+                                <h4><%= propriedade.endereco %></h4>
                                 <p>R$<%= propriedade.preco %>/noite</p>
                                 <button class="cta-button" onclick="window.location.href='/details/id=<%=propriedade.id %>'">Ver Detalhes</button>
                             </div>
@@ -64,6 +59,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/script.js"></script>
+    <script src="/home-js"></script>
 </body>
 </html>

@@ -14,12 +14,6 @@
         <div class="logo">
             <h1>Hospedagem</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="/acomodos">Acomodações</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
@@ -29,9 +23,9 @@
             </div>
 
             <div class="property-info">
-                <h2><%= propriedade[0].lugar %></h2>
-                <p class="property-location"><%= propriedade[0].subtitle %></p>
-                <p class="property-price">R$ <%= propriedade[0].preco %>/noite</p>
+                <h2><%= propriedade.nome %></h2>
+                <p class="property-location"><%= propriedade.endereco %></p>
+                <p class="property-price">R$ <%= propriedade.preco %>/noite</p>
             </div>
 
             <section class="property-gallery">
@@ -48,10 +42,9 @@
             <section class="property-details">
                 <h3>Detalhes da Propriedade</h3>
                 <ul>
-                    <li><strong>Quartos:</strong> <%= propriedade[0].quartos %></li>
-                    <li><strong>Banheiros:</strong> <%= propriedade[0].banheiros %></li>
-                    <li><strong>Piscina:</strong> <%= propriedade[0].piscina ? 'Sim' : 'Não' %></li>
-
+                    <li><strong>Quartos:</strong> <%= propriedade.quartos %></li>
+                    <li><strong>Banheiros:</strong> <%= propriedade.banheiro %></li>
+                    <li><strong>Piscina:</strong> <%= propriedade.piscina ? 'Sim' : 'Não' %></li>
                 </ul>
             </section>
 
@@ -73,7 +66,5 @@
     <footer>
         <p>&copy; 2024 Hospedagem & Reservas. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
